@@ -7,8 +7,6 @@
     <title>Laravel</title>
 </head>
 <body>
-@foreach($data as $serie)
-    <x-seriecard :serie="$serie"></x-seriecard>
-@endforeach
+
 </body>
 

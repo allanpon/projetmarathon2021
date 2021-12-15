@@ -8,15 +8,13 @@
     @section("content")
     Bonjour et bienvenue sur la liste des série !<br>
     <form>
+        <input type="text" name="recherche"/>
+        <input type="submit" value="Envoyez">
         @if(!empty($search))
-            <a href="{{route("series.index")}}">Réinitialisez</a>
-        @else
-            <input type="text" name="recherche"/>
-            <input type="submit">
+            <input type="submit" value="Réinitialisez">
         @endif
-
-
     </form>
+
 
     @if(count($data) ==0)
         <h1>Pas de résultat</h1>

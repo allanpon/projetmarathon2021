@@ -26,6 +26,7 @@ class SerieController extends Controller
         return view('listeSeries', ['data' => $series,"search" => $search]);
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
@@ -56,7 +57,9 @@ class SerieController extends Controller
     public function show($id)
     {
         $serie = Serie::find($id);
-        return view('series.show', ['serie' => $serie]);
+        $commentaires = $serie->comments;
+        $episodes = $serie->episodes;
+        return view('series.show', ['serie' => $serie, 'commentaires' => $commentaires, 'episodes' => $episodes]);
     }
 
     /**

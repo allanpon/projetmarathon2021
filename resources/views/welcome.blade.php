@@ -1,7 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    C'est la page générale du site,
-    <br />
-    on doit y voir les dernières séries par exemple.
+    <div class="caroussel">
+
+    </div>
+
+
+    @foreach($data as $serie)
+        <x-seriecard :serie="$serie"></x-seriecard>
+    @endforeach
 @endsection

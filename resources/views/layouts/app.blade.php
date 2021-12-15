@@ -13,7 +13,7 @@
 <body>
 <header>
     <a href="{{ url('/') }}">
-        Ma super appli
+        Movibe
     </a>
 </header>
 <!-- Authentication Links -->
