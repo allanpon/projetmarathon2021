@@ -13,10 +13,17 @@ class SerieController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $series = Serie::all();
-        return view('listeSeries', ['data' => $series]);
+        $search=$request->get("recherche");
+        if(empty($search)){
+            $series = Serie::all();
+        }
+        else{
+            $series = Serie::where("nom","like", "%". $request->get("recherche")."%")->get();
+        }
+
+        return view('listeSeries', ['data' => $series,"search" => $search]);
     }
 
     /**

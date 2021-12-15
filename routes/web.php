@@ -21,6 +21,9 @@ Route::get('/cards', function(){
     return (new App\Http\Controllers\Controller)->affiche();
 });
 
+
 Route::resource("series", "App\Http\Controllers\SerieController");
+
+
 
 //Route::post("/login", );
