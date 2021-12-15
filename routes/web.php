@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any("/series", [SerieController::class, 'liste']);
+Route::resource("series", "App\Http\Controllers\SerieController");
 
 //Route::post("/login", );

@@ -38,4 +38,7 @@ class Serie extends Model {
         return $this->episodes()->max("saison");
     }
 
+    public function nbEpisodes() {
+        return $this->episodes()->count();
+    }
 }
