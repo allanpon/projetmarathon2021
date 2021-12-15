@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::any("/listeSeries", [SerieController::class, 'liste']);
+Route::any("/series", [SerieController::class, 'liste']);
 
 //Route::post("/login", );
