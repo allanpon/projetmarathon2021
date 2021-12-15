@@ -22,11 +22,11 @@
         @guest
             <li><a href="{{ route('login') }}">Login</a></li>
             <li><a href="{{ route('register') }}">Register</a></li>
-            <li><a href="/series">Liste</a></li>
         @else
             <li> Bonjour {{ Auth::user()->name }}</li>
             @if (Auth::user())
                 <li><a href="#">Des liens spécifiques pour utilisateurs connectés..</a></li>
+                <li><a href="/user">profile</a></li>
             @endif
             <li><a href="{{ route('logout') }}"
                    onclick="event.preventDefault();
@@ -37,6 +37,8 @@
                 {{ csrf_field() }}
             </form>
         @endguest
+        <li><a href="/series">Liste</a></li>
+        <li><a href="/cards">cards_test</a></li>
     </ul>
 </nav>
 <div id="main">
