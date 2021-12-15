@@ -23,6 +23,15 @@ class SerieController extends Controller
             $series = Serie::where("nom","like", "%". $request->get("recherche")."%")->get();
         }
 
+        $genre = $request->get("genre");
+        if(empty($genre)){
+            $genre = Serie::all();
+        }
+        else{
+            $series = Serie::where("genre",$request->get("genre"))->get();
+        }
+
+
         return view('listeSeries', ['data' => $series,"search" => $search]);
     }
 
