@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::any('/', [HomeController::class, 'index']);
+Route::get('/cards', function(){
+    return (new App\Http\Controllers\Controller)->affiche();
+})->name('cards');
+
+Route::any('/', [HomeController::class, 'index'])->name('home');
 
 
 Route::resource("series", "App\Http\Controllers\SerieController");

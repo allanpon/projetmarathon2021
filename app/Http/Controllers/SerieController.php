@@ -26,6 +26,7 @@ class SerieController extends Controller
         return view('listeSeries', ['data' => $series,"search" => $search]);
     }
 
+
     /**
      * Show the form for creating a new resource.
      *
