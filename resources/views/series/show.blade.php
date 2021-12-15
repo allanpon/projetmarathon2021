@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Détail Série ID {{ $serie->id}}</title>
 </head>
+<header>
+    @include('layouts.app')
+</header>
 <body>
-@include('layouts.app')
 <br>
 id: {{ $serie->id}}<br><br>
 nom: {{ $serie->nom}}<br><br>

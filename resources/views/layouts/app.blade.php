@@ -9,13 +9,10 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
 </head>
-<body>
-<header>
-    <a href="{{ url('/') }}">
-        Movibe
-    </a>
-</header>
-<!-- Authentication Links -->
+
+<a href="{{ url('/') }}">
+    Movibe
+</a>
 <nav>
     <ul>
         @guest
@@ -44,5 +41,6 @@
     @yield('content')
 </div>
 <!-- Scripts -->
-</body>
+</header>
+
 </html>
