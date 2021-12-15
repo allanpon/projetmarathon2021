@@ -21,6 +21,6 @@ Route::get('/cards', function(){
     return (new App\Http\Controllers\Controller)->affiche();
 });
 
-Route::any("/listeSeries", [SerieController::class, 'liste']);
+Route::any("/series", [SerieController::class, 'liste']);
 
 //Route::post("/login", );
