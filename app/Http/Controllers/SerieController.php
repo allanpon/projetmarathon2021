@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
+=======
+use App\Models\Serie;
+>>>>>>> origin/main
 use Illuminate\Http\Request;
 
 class SerieController extends Controller
 {
+<<<<<<< HEAD
     /**
      * Display a listing of the resource.
      *
@@ -81,4 +86,12 @@ class SerieController extends Controller
     {
         //
     }
+=======
+    public function liste(){
+        $series = Serie::all();
+        return view('listeSeries', ['data' => $series]);
+    }
+
+
+>>>>>>> origin/main
 }
