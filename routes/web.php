@@ -17,6 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/cards', function(){
+    return (new App\Http\Controllers\Controller)->affiche();
+});
 
 Route::resource("series", "App\Http\Controllers\SerieController");
 
