@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SerieController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,8 @@ Route::get('/cards', function(){
 });
 
 Route::resource("series", "App\Http\Controllers\SerieController");
-
+//Route::resource("user", "App\Http\Controllers\UserController");
+Route::get('/user',function (){
+    return view('user.profile');
+});
 //Route::post("/login", );
