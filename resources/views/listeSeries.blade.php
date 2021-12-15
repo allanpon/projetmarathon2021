@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="fr">
 <body>
 
     Bonjour et bienvenue sur la liste des série !
@@ -16,7 +16,7 @@
         <tbody>
         @foreach($data as $serie)
             <tr>
-                <td><img src={{$serie->Urlimage}}></td>
+                <td><img src="{{$serie->urlImage}}" style="width:30px"></td>
                 <td>{{$serie->nom }}</td>
                 <td>{{$serie->genre }}</td>
                 <td>{{$serie->langue}}</td>
