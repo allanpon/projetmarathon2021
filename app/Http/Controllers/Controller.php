@@ -11,9 +11,4 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-    public function affiche(){
-        $data=Serie::all();
-        $data5=$data->random(5);
-        return view('card',['data'=>$data5]);
-    }
 }

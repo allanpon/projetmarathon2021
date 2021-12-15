@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SerieController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,12 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/cards', function(){
-    return (new App\Http\Controllers\Controller)->affiche();
-});
+Route::any('/', [HomeController::class, 'index']);
 
 
 Route::resource("series", "App\Http\Controllers\SerieController");
