@@ -1,6 +1,6 @@
 <div>
 
-    <div style="margin-right: 100px">
+    <div style="margin-left: 100px;margin-right: 100px;border-radius: 25px;border: 1px #455d5d">
         <img style="width:50px;float: left;border-radius: 25px" src="{{$c->avatar}}">
         <p style="float: left">{{$c->name}}</p>
         <p style="float: left;margin-left: 10px">Note : {{$c->note}}</p>

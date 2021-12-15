@@ -1,4 +1,4 @@
-@include('layouts.app')
+@include('layouts.app',['syle'=>""])
 <img src="{{Auth::user()->avatar}}" alt="avatar">
 <br>
 Bonjour {{ Auth::user()->name }}

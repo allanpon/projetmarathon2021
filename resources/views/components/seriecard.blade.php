@@ -1,7 +1,4 @@
-<div class="game-card">
-    <img src="{{$serie->urlImage}}" alt="avatar">
-    <div class="card__body">
-        <h2 class="card__title">{{$serie->nom}}</h2>
-        <p>Genre : {{$serie->genre}}</p>
-    </div>
+<div>
+    <a href="/series/{{$serie->id}}"><img style="width: 10%" src="{{$serie->urlImage}}" alt="avatar"></a>
+    <h2>{{$serie->nom}}</h2>
 </div>
