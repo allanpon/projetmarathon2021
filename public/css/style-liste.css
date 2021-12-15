@@ -1,0 +1,21 @@
+#series {
+    display : grid;
+    grid-column-gap : 40px;
+    grid-row-gap : 10px;
+    grid-template-columns : repeat(3, 1fr);
+    margin-bottom:20px;
+
+}
+
+
+
+#series div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-search{
+    margin-bottom: 20px;
+}
