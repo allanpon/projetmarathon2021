@@ -15,7 +15,7 @@ date de sortie: {{ $serie->premiere}}<br><br>
 avis: {{ $serie->avis}}<br><br>
 episode: {{ $serie->nbEpisodes()}}<br><br>
 saison: {{ $serie->nbSaisons()}}<br><br>
-commentaires:<br>
+
 @yield('scripts')
 </body>
 </html>
