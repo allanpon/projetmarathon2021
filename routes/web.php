@@ -26,6 +26,6 @@ Route::any('/', [HomeController::class, 'index'])->name('home');
 Route::resource("series", "App\Http\Controllers\SerieController");
 //Route::resource("user", "App\Http\Controllers\UserController");
 Route::get('/user',function (){
-    return view('user.profile');
+    return (new App\Http\Controllers\UserController)->profile();
 });
 //Route::post("/login", );
