@@ -7,10 +7,9 @@
 @include('layouts.navbar')
 <body>
 <div class="detailetimage">
-    <img src='/{{$serie->urlImage}}'>
+    <img src='{{asset($serie->urlImage)}}'>
     <div class="detail">
         <h1>{{$serie->nom}}</h1><br>
-        <div class="gauche">
         {{ $serie->note }}/10<br>
         {{ $serie->genre}}<br>
         {{ $serie->langue}}<br>
@@ -18,7 +17,6 @@
         {{ $serie->nbEpisodes()}} épisodes<br>
         {{ $serie->nbSaisons()}} saisons<br>
             Avis: {{ $serie->avis}}
-        </div>
     </div>
 </div>
 

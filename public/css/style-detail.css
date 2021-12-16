@@ -30,11 +30,6 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-.gauche {
-    display: flex;
-    flex-direction: row;
-}
-
 h1 {
     margin: 0;
     font-size: 150px;
