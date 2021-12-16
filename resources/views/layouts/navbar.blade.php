@@ -5,6 +5,7 @@
     <a href='{{route('home')}}' class="imglink"> <img src="{{asset('img/logo.png')}}" class="logimg" alt=""></a>
     <form id="form-search">
         <input type="text" class="search-box" name="recherche" placeholder="Rechercher">
+
         <select class="categories" name="genre" id="genre-select" onchange="document.querySelector('#form-search').submit();">
             <option value="">--Selectionnez un genre--</option>
             <option value="crime">Crime</option>

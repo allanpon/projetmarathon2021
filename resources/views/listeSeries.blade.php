@@ -8,7 +8,6 @@
 
 <body>
 
-    Bonjour et bienvenue sur la liste des série !<br>
 
     @if(count($data) ==0)
         <h1>Pas de résultat</h1>

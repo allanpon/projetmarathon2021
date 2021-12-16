@@ -1,8 +1,8 @@
 /* ROBOTO */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;400&display=swap');
 
-* {box-sizing:border-box;
---swiper-theme-color: white;}
+*
+{--swiper-theme-color: white;}
 
 h1 {
     font-family: 'Bebas Neue', cursive;
