@@ -8,6 +8,9 @@
 <title>Movibe</title>
 
 <body>
+
+
+
     <div class="swiper">
         <div class="swiper-wrapper">
 @foreach($data5 as $serie)

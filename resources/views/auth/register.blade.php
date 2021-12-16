@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/style-login.css')}}">
     <style>
         body {
-            background-image: url(" {{asset('/img/Background_login.png')}}");
+            background-image: url("img/Background_login.jpg");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
