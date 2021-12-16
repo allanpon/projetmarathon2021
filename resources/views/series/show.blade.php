@@ -16,7 +16,6 @@
         {{ $serie->premiere}}<br>
         {{ $serie->nbEpisodes()}} épisodes<br>
         {{ $serie->nbSaisons()}} saisons<br>
-            Avis: {{ $serie->avis}}
     </div>
 </div>
 
@@ -27,6 +26,9 @@
 @foreach($commentaires as $commentaire)
     <x-comment :com="$commentaire"></x-comment><br><br>
 @endforeach
+
+<h2>Avis</h2>
+{{ $serie->avis}}
 
 <h2>Episodes</h2>
 @foreach($episodes as $episode)

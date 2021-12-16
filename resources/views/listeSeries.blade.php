@@ -18,7 +18,7 @@
                 <div class="example">
                     <img src="{{asset($serie->urlImage)}}">
                     <a href="{{route('series.show',$serie->id)}}">
-                        <div class="content">
+                        <div class="content">1
                             <div class="text">
                                 Genre: {{$serie->genre}}<br>
                                 Langue: {{$serie->langue}}<br>

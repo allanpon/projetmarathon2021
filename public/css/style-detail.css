@@ -2,7 +2,6 @@
 
 body {
     margin-left: 150px;
-    overflow-x: hidden
 }
 
 p {
@@ -27,7 +26,8 @@ p {
     margin-left: 10px;
     margin-right: 10px;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
 }
 
 h1 {

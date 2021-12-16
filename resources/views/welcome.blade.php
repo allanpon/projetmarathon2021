@@ -22,6 +22,10 @@
         <div class="swiper-button-next"></div>
     </div>
 
+    <h1 style="text-align: center">Avis des rédacteurs</h1>
+
+    <video controls><source src="{{asset('vid/avisanglais.mp4')}}"></video> <br>
+
     <div class="troisserierandom">
         @foreach($data3 as $serie)
             <img src='{{$serie->urlImage}}'>
