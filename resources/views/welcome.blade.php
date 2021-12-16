@@ -26,7 +26,7 @@
 
     <video controls><source src="{{asset('vid/avisanglais.mp4')}}"></video> <br>
 
-    <div class="troisserierandom">
+    <div class="troisserierdm">
         @foreach($data3 as $serie)
             <img src='{{$serie->urlImage}}'>
         <div class="under">
