@@ -29,4 +29,4 @@ Route::patch('/user/seen/{id}','App\Http\Controllers\UserController@seen')->name
 Route::patch('/user/{id}','App\Http\Controllers\CommentController@valider')->name('valide');
 Route::patch('/comment/del/{id}','App\Http\Controllers\CommentController@delete')->name('delete');
 Route::post('/comment/creer/{ids','App\Http\Controllers\CommentController@delete')->name('comment.creer');
-Route::post("/login", )->name('login');
+//Route::post("/login", )->name('login');
