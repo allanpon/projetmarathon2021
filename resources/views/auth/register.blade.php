@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/style-login.css')}}">
     <style>
         body {
-            background-image: url(" {{asset('img/Background_login.png')}}");
+            background-image: url(" {{asset('/img/Background_login.png')}}");
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
@@ -65,12 +65,12 @@
                             </div>
 
                             <div class="row mb-0">
-                                <div class="col-md-6 offset-md-4" style="text-align: center">
+                                <div class="col-md-6 offset-md-4" style="text-align: center;">
                                     <button type="submit" class="btn btn-primary">
-                                        {{ __('Register') }}
+                                        Inscription
                                     </button>
                                 </div>
-                                <div class="col-md-6 offset-md-4" style="text-align: center">
+                                <div class="col-md-6 offset-md-4" style="text-align: center;">
                                     <button type="submit" class="btn btn-primary">
                                         <a href="{{ route('login')}}">Connexion</a>
                                     </button>
