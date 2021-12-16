@@ -1,8 +1,14 @@
 <!doctype html>
 <html lang="fr">
-<link rel="stylesheet" href="css/style-liste.css">
-@include("layouts.navbar")
+<header>
+    <link rel="stylesheet" href="css/style-liste.css">
+    @include('layouts.navbar')
+
+</header>
+
+
 <body>
+
     @section("content")
     Bonjour et bienvenue sur la liste des série !<br>
     {{--}}<form id="form-search">
