@@ -45,7 +45,6 @@
             </form>
         @endguest
         <li><a href="/series">Liste</a></li>
-        <li><a href="/cards">cards_test</a></li>
     </ul>
 </nav>
 <div id="main">
