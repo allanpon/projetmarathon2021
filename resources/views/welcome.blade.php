@@ -27,7 +27,8 @@
     <video     style="display: block;
                margin: 0 auto;
                width: 1100px;
-               height: 500px" controls><source src="{{asset('vid/avisanglais.mp4')}}"></video> <br>
+               height: 500px;
+                margin-bottom: 20px" controls><source src="{{asset('vid/avisanglais.mp4')}}"></video> <br>
 
     <div class="troisserierandom">
         @foreach($data3 as $serie)
