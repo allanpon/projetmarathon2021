@@ -40,7 +40,7 @@
         @endguest
         <div id="myDropdown" class="dropdown-content">
             @guest()
-                <a href="{{ route('login')}}">Connection</a>
+                <a href="{{ route('login')}}">Connexion</a>
                 <a href="{{ route('register')}}">Inscription</a>
             @else
                 <a href="{{route('user')}}">Profil</a>
