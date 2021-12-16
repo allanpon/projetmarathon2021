@@ -27,5 +27,8 @@ Route::get('/user',function (){
     return (new App\Http\Controllers\UserController)->profile();
 })->name('user');
 
-Route::patch('/user/{id}','App\Http\Controllers\UserController@valider')->name('valide');
+Route::patch('/user/seen/{id}','App\Http\Controllers\UserController@seen')->name('seen');
+
+Route::patch('/user/{id}','App\Http\Controllers\CommentController@valider')->name('valide');
+Route::patch('/comment/del/{id}','App\Http\Controllers\CommentController@delete')->name('delete');
 //Route::post("/login", );

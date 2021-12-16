@@ -30,7 +30,7 @@
                 {{ csrf_field() }}
             </form>
         @endguest
-        <li><a href="/series">Liste</a></li>
+        <li><a href="{{route('series.index')}}">Liste</a></li>
     </ul>
 </nav>
 <div id="main">

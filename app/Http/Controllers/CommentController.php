@@ -11,6 +11,10 @@ class CommentController extends Controller
         DB::update('update comments set validated=1 where id= ?',[$id]);
         return redirect()->back()->with('message', 'le commentaire a été validé');
     }
+    public static function delete(Request $request,int $id){
+        DB::update('delete from comments where id= ?',[$id]);
+        return redirect()->back()->with('message', 'le commentaire a été validé');
+    }
     /**
      * Display a listing of the resource.
      *

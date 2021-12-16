@@ -18,7 +18,7 @@ statut:
     <br>
     commentaire en attente de validation: <br><br>
     @foreach($com as $c)
-        <x-comment :c="$c"></x-comment>
+        <x-comment :com="$c"></x-comment>
     @endforeach
 @else
     client

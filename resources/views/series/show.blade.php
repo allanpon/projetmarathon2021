@@ -9,15 +9,10 @@ nom: {{ $serie->nom}}<br><br>
 genre: {{ $serie->genre}}<br><br>
 langue: {{ $serie->langue}}<br><br>
 date de sortie: {{ $serie->premiere}}<br><br>
-avis: {{ $serie->avis}}<br><br>
 nombre d'episodes: {{ $serie->nbEpisodes()}}<br><br>
 episodes: <br>
 @foreach($episodes as $episode)
-    <ul>
-        <li>Episode {{$episode->numero}}, Saison {{$episode->saison}}: {{$episode->nom}}</li>
-        {!! $episode->resume !!}
-        {{ $episode->duree }} minutes
-    </ul>
+    <x-episode :ep="$episode"></x-episode></li>
 @endforeach
 nombre de saisons: {{ $serie->nbSaisons()}}<br><br>
 commentaires: <br>
