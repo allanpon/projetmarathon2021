@@ -10,7 +10,7 @@ h1 {
     text-decoration-thickness: 4px;
 }
 
-.troisserierdm {
+.troisserierandom {
     display: flex;
     margin-bottom: 100px;
     margin-left: 10%;
@@ -19,7 +19,7 @@ h1 {
     margin-top: 100px;
 }
 
-.troisserierdm img {
+.troisserierandom img {
     width: 200px;
     height: 300px;
 }
@@ -130,13 +130,6 @@ h1 {
 .detail {
     display: flex;
     flex-direction: column;
-}
-
-video  {
-    display: block;
-    margin: 0 auto;
-    width: 1100px;
-    height: 500px;
 }
 
 @media (min-width: 768px) {

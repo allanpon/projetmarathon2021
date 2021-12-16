@@ -24,9 +24,12 @@
 
     <h1 style="text-align: center">Avis des rédacteurs</h1>
 
-    <video controls><source src="{{asset('vid/avisanglais.mp4')}}"></video> <br>
+    <video     style="display: block;
+               margin: 0 auto;
+               width: 1100px;
+               height: 500px" controls><source src="{{asset('vid/avisanglais.mp4')}}"></video> <br>
 
-    <div class="troisserierdm">
+    <div class="troisserierandom">
         @foreach($data3 as $serie)
             <img src='{{$serie->urlImage}}'>
         <div class="under">
