@@ -35,7 +35,7 @@ class CommentController extends Controller
     {
     }
 
-    public function store(Request $request,array $ids)
+    public function store(Request $request,int $ids)
     {
         $this->validate(
             $request,
@@ -48,8 +48,8 @@ class CommentController extends Controller
         $comment->content = $request->comment;
         $comment->note = $request->note ;
         $comment->validated =0;
-        $comment->user_id=$ids[0];
-        $comment->serie_id =$ids[1];
+        $comment->user_id=1;//$ids[0];
+        $comment->serie_id =$ids;
         $comment->save();
         return redirect()->back()->with('message', 'le commentaire a été sauvegardé');;
     }

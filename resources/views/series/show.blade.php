@@ -23,8 +23,7 @@
 {!! $serie->resume !!}
 
 <h2>Commentaires</h2>
-@auth()
- <form action="{{route('comment.creer',[Auth::id(),$serie->id])}}" method="POST">
+ <form action="{{route('comment.creer',$serie->id)}}" method="POST">
     {!! csrf_field() !!}
     <div class="text-center" style="margin-top: 2rem">
         <h5>Laisser un commentaire</h5>
@@ -46,7 +45,6 @@
     </div>
 
 </form>
-@endauth
 @foreach($commentaires as $commentaire)
     <x-comment :com="$commentaire"></x-comment><br><br>
 @endforeach

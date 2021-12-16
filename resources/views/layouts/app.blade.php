@@ -35,7 +35,5 @@
         <li><a href="{{route('series.index')}}">Liste</a></li>
     </ul>
 </nav>
-<div id="main">
-    @yield('content')
-</div>
+
 </head>
