@@ -17,7 +17,7 @@
             @foreach($data as $serie)
                 <div class="example">
                     <img src="{{asset($serie->urlImage)}}">
-                    <a href="/series/{{$serie->id}}">
+                    <a href="{{route('series.show',$serie->id)}}">
                         <div class="content">
                             <div class="text">
                                 Genre: {{$serie->genre}}<br>

@@ -6,7 +6,7 @@ foreach ($ct as $ct2){
 ?>
 @guest()
     <div>
-        <div style="margin-left: 100px;margin-right: 100px;border-radius: 25px;border: 1px #455d5d">
+        <div style="border-radius: 25px;border: 1px #455d5d">
             <img style="width:50px;float: left;border-radius: 25px" src="{{asset($c->avatar)}}">
             <p style="float: left">{{$c->name}}</p>
             <p style="float: left;margin-left: 10px">Note : {{$c->note}}</p>
@@ -19,7 +19,7 @@ foreach ($ct as $ct2){
 @else
     @if(Auth::user()->id=$c->user_id||$c->validated==1||Auth::user()->administrateur)
     <div>
-        <div style="margin-left: 100px;margin-right: 100px;border-radius: 25px;border: 1px #455d5d">
+        <div style="border-radius: 25px;border: 1px #455d5d">
             <img style="width:50px;float: left;border-radius: 25px" src="{{asset($c->avatar)}}">
             <p style="float: left">{{$c->name}}</p>
             <p style="float: left;margin-left: 10px">Note : {{$c->note}}</p>

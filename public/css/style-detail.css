@@ -6,7 +6,7 @@ body {
 }
 
 p {
-    margin-right: 10%;
+    margin-right: 8%;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -23,7 +23,6 @@ p {
 }
 
 .detail {
-    display: flex;
     flex-direction: column;
     margin-left: 10px;
     margin-right: 10px;
@@ -31,10 +30,17 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+.gauche {
+    display: flex;
+    flex-direction: row;
+}
+
 h1 {
     margin: 0;
     font-size: 150px;
     font-family: 'Bebas Neue', cursive;
+    text-decoration: underline #F4D69B;
+    text-decoration-thickness: 4px;
 }
 
 h2 {
