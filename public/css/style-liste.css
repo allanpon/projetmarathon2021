@@ -10,7 +10,9 @@
 
 }
 
-
+body {
+    overflow-x:hidden;
+}
 
 #series div {
     display: flex;

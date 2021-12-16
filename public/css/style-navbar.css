@@ -13,8 +13,6 @@
     margin-top: 10px;
 }
 
-.dropbtn:hover, .dropbtn:focus {
-}
 
 .dropdown {
     position: relative;
@@ -48,6 +46,7 @@
 
 
 body{
+
     margin-top:150px;
     width: 100%;
     background: #fafafa;
@@ -98,7 +97,7 @@ body{
 
 
 
-@media (max-width: 1200px){
+@media (max-width: 1400px){
     .search-box{
         display: none;
     }
@@ -142,7 +141,6 @@ body{
 .search-box{
     margin-left: 0%;
     margin-top: 15px;
-    transform: translateX(-50%);
     height: 3rem;
     width: 40rem;
     background: #fafafa;
@@ -153,10 +151,6 @@ body{
     text-transform: capitalize;
 }
 
-#form-search{
-    margin-right:20px;
-
-}
 .search-box::placeholder{
     color: rgba(0, 0, 0, 0.5);
 }
