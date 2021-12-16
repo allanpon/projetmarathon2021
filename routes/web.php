@@ -20,7 +20,6 @@ use Illuminate\Support\Facades\Route;
 Route::any('/', [HomeController::class, 'index'])->name('home');
 
 Route::resource("series", "App\Http\Controllers\SerieController");
-//Route::resource("user", "App\Http\Controllers\UserController");
 Route::get('/user',function (){
     return (new App\Http\Controllers\UserController)->profile();
 })->name('user');

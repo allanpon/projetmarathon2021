@@ -4,10 +4,10 @@ foreach ($ct as $ct2){
     $c=$ct2;
 }
 ?>
-@if($c->validated==1||Auth::user()->administrateur)
+@if(Auth::user()->id=$c->user_id||$c->validated==1||Auth::user()->administrateur)
     <div>
         <div style="margin-left: 100px;margin-right: 100px;border-radius: 25px;border: 1px #455d5d">
-            <img style="width:50px;float: left;border-radius: 25px" src="{{$c->avatar}}">
+            <img style="width:50px;float: left;border-radius: 25px" src="{{asset($c->avatar)}}">
             <p style="float: left">{{$c->name}}</p>
             <p style="float: left;margin-left: 10px">Note : {{$c->note}}</p>
             @if(($c->validated)==0)
@@ -19,12 +19,16 @@ foreach ($ct as $ct2){
                     <form action="{{ route('valide', $c->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}
-                        <button type="submit" style="margin-left: 10px;float: right">valider</button>
+                        <button type="submit" style="margin-left: 10px;float: right">validerooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</button>
                     </form>
                 @endif
             @endif
             @if(Auth::user()->id=$c->user_id||Auth::user()->administrateur)
-
+                <form action="{{ route('delete', $c->id) }}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('PATCH') }}
+                    <button type="submit" style="margin-left: 10px;float: right">supprimer le<br>commentaire</button>
+                </form>
             @endif
             <br>
             <br>

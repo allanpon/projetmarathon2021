@@ -6,9 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- Styles -->
     <link
-            rel="stylesheet"
-            href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
-    />
+            rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
     <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
@@ -22,18 +20,17 @@
 <nav>
     <ul>
         @guest
-            <li><a href="{{ route('login') }}">Login</a></li>
-            <li><a href="{{ route('register') }}">Register</a></li>
+
         @else
             <li> Bonjour {{ Auth::user()->name }}</li>
             @if (Auth::user())
                 <li><a href="#">Des liens spécifiques pour utilisateurs connectés..</a></li>
-                <li><a href="/user">profile</a></li>
+                <li></li>
             @endif
             <li><a href="{{ route('logout') }}"
                    onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                    Logout
+                    Se déconnecter
                 </a></li>
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 {{ csrf_field() }}

@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="fr">
 <title>Détail Série ID {{ $serie->id}}</title>
-@include('layouts.app')
+@include('layouts.navbar')
+<link rel="stylesheet" href="{{asset('css/style.css')}}">
 <body>
 <br>
 id: {{ $serie->id}}<br><br>
@@ -10,16 +11,14 @@ genre: {{ $serie->genre}}<br><br>
 langue: {{ $serie->langue}}<br><br>
 date de sortie: {{ $serie->premiere}}<br><br>
 nombre d'episodes: {{ $serie->nbEpisodes()}}<br><br>
+nombre de saisons: {{ $serie->nbSaisons()}}<br><br>
 episodes: <br>
 @foreach($episodes as $episode)
-    <x-episode :ep="$episode"></x-episode></li>
+    <x-episode :ep="$episode"></x-episode>
 @endforeach
-nombre de saisons: {{ $serie->nbSaisons()}}<br><br>
-commentaires: <br>
+commentaires: <br><br>
 @foreach($commentaires as $commentaire)
-    ID de l'utilisateur: {!! $commentaire->id !!} <br>
-    Créé le: {!! $commentaire->created_at !!}
-    {!! $commentaire->content !!} <br><br>
+    <x-comment :com="$commentaire"></x-comment><br>
 @endforeach
 @yield('scripts')
 </body>

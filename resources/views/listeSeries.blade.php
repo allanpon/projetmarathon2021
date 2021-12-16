@@ -2,9 +2,8 @@
 <html lang="fr">
 <header>
     <link rel="stylesheet" href="css/style-liste.css">
-    @include('layouts.navbar')
-
 </header>
+@include('layouts.navbar')
 
 
 <body>

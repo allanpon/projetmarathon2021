@@ -24,7 +24,7 @@
             <h1>{{$serie->nom}}</h1>
             <?php
             $in = $serie->resume;
-            $out = strlen($in) > 350 ? mb_substr($in,0,350)."..." : $in;
+            $out = strlen($in) > 360 ? mb_substr($in,0,360)."..." : $in;
             echo $out;
             ?>
         </div>
