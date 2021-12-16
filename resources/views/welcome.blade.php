@@ -5,6 +5,8 @@
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 
+<title>Movibe</title>
+
 <body>
     <div class="swiper">
         <div class="swiper-wrapper">
@@ -34,7 +36,7 @@
         @endforeach
     </div>
 
-    <a href="{{route('series.index')}}" class="button-series" role="button">VOIR TOUTES LES SÉRIES</a>
+    <a href="{{ route('series.index') }}" class="button-series" role="button">VOIR TOUTES LES SÉRIES</a>
 
     <script src="{{asset('js/slideshow.js')}}"></script>
 </body>

@@ -5,6 +5,7 @@
     @include('layouts.navbar')
 </header>
 
+<title>Liste des séries</title>
 
 <body>
 
@@ -19,9 +20,9 @@
                     <a href="/series/{{$serie->id}}">
                         <div class="content">
                             <div class="text">
-                                Genre :{{$serie->genre}}<br>
-                                Langue :{{$serie->langue}}<br>
-                                Nombre de saisons :{{$serie->nbSaisons()}}
+                                Genre: {{$serie->genre}}<br>
+                                Langue: {{$serie->langue}}<br>
+                                Nombre de saisons: {{$serie->nbSaisons()}}
                             </div>
                         </div>
                     </a>

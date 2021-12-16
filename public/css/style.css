@@ -118,8 +118,17 @@ h1 {
     fill: #06f;
 }
 
+.detailetimage {
+    display: flex;
+    margin-bottom: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: center;
+}
+
 .detail {
-    color: red;
+    display: flex;
+    flex-direction: column;
 }
 
 @media (min-width: 768px) {

@@ -1,25 +1,33 @@
 <!doctype html>
 <html lang="fr">
-<link rel="stylesheet" href="css/style.css">
-<title>Détail Série ID {{ $serie->id}}</title>
-@include('layouts.app')
+
+<link rel="stylesheet" href="{{asset('css/style-detail.css')}}">
+
+<title>Détail de {{ $serie->nom}}</title>
+@include('layouts.navbar')
 <body>
-<div class="detail">
+<div class="detailetimage">
     <img src='/{{$serie->urlImage}}'>
-    {{$serie->nom}}
-    Genre: {{ $serie->genre}}
-    Langue: {{ $serie->langue}}
-    Date de sortie: {{ $serie->premiere}}
-    Avis: {{ $serie->avis}}
-    Nombre d'episodes: {{ $serie->nbEpisodes()}}
-    Nombre de saisons: {{ $serie->nbSaisons()}}
+    <div class="detail">
+        <h1>{{$serie->nom}}</h1><br>
+        {{ $serie->genre}}<br>
+        {{ $serie->langue}}<br>
+        {{ $serie->premiere}}<br>
+        {{ $serie->nbEpisodes()}} épisodes<br>
+        {{ $serie->nbSaisons()}} saisons<br>
+            Avis: {{ $serie->avis}}
+    </div>
 </div>
-Resume: {!! $serie->resume !!}
-Commentaires: <br>
+
+<h2>Resume</h2>
+{!! $serie->resume !!}
+
+<h2>Commentaires</h2>
 @foreach($commentaires as $commentaire)
     <x-comment :com="$commentaire"></x-comment><br><br>
 @endforeach
-episodes: <br>
+
+<h2>Episodes</h2>
 @foreach($episodes as $episode)
     <x-episode :ep="$episode"></x-episode><br><br>
 @endforeach

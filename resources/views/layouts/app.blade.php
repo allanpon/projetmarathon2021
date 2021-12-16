@@ -7,8 +7,6 @@
     <!-- Styles -->
 
 
-
-
 </header>
 
 <a href="{{ url('/') }}">
