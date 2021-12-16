@@ -21,7 +21,7 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header"><img  style="width: 100%;margin-bottom: 10px" src="{{asset('/img/logo.png')}}"></div>
+                    <div class="card-header"><a href="{{route('home')}}"><img  style="width: 100%;margin-bottom: 10px" src="{{asset('/img/logo.png')}}"></a></div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
