@@ -1,3 +1,6 @@
+/* ROBOTO */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 * {box-sizing:border-box}
 
 /* Slideshow container */
@@ -28,6 +31,17 @@
     user-select: none;
 }
 
+.slide {
+    position: relative;
+}
+
+
+.swiper {
+    margin: 0 auto;
+    max-width: 1100px;
+    height: 500px;
+}
+
 /* Position the "next button" to the right */
 .next {
     right: 0;
@@ -39,15 +53,29 @@
     background-color: rgba(0,0,0,0.8);
 }
 
+.slide img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    object-fit: cover;
+}
+
+
 /* Caption text */
 .text {
-    color: #f2f2f2;
+    position: absolute;
+    z-index: 9999;
+    color: black;
+    background-color: white;
     font-size: 15px;
     padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
+    left:50%;
+    transform: translateX(-50%);
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: underline #fad69b;
+    text-decoration-thickness: 4px;
 }
 
 /* Number text (1/3 etc) */

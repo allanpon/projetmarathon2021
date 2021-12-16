@@ -19,8 +19,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::any('/', [HomeController::class, 'index'])->name('home');
 
-Route::resource('slides', 'App\Http\Controllers\SliderController');
-
 Route::resource("series", "App\Http\Controllers\SerieController");
 //Route::resource("user", "App\Http\Controllers\UserController");
 Route::get('/user',function (){
