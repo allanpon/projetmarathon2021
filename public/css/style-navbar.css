@@ -1,11 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
 .dropbtn {
-    /*background-color: #f5f5f5;
-    color: #5f5f5f;
-    padding: 16px;
     font-size: 16px;
-    border: none;*/
     cursor: pointer;
     align-content: center;
     margin-left: 1rem;
@@ -18,8 +14,6 @@
 }
 
 .dropbtn:hover, .dropbtn:focus {
-    background-color: #dbdbdb;
-    color: #5f5f5f;
 }
 
 .dropdown {

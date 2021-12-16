@@ -15,6 +15,7 @@
 <nav>
     <ul>
         @guest
+            <a href="{{ route('login')}}">Connection</a>
 
         @else
             <li> Bonjour {{ Auth::user()->name }}</li>
