@@ -24,7 +24,7 @@
 {!! $serie->resume !!}
 
 <h2>Commentaires</h2>
- <form action="{{route('comment.creer',[Auth::id(),$serie->id])}}" method="POST">
+ <form action="{{route('comment.creer',$serie->id)}}" method="POST">
     {!! csrf_field() !!}
     <div class="text-center" style="margin-top: 2rem">
         <h5>Laisser un commentaire</h5>

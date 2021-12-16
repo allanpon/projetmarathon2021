@@ -23,6 +23,8 @@ statut:
     @foreach($com as $c)
         <x-comment :com="$c"></x-comment>
     @endforeach
+@else
+    client
 @endif
 <br>
 episode visionnés:
