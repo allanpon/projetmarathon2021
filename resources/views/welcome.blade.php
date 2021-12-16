@@ -1,8 +1,11 @@
-@extends('layouts.app')
+@include('layouts.navbar')
 
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
-@section('content')
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<body>
     <div class="swiper">
         <div class="swiper-wrapper">
 @foreach($data5 as $serie)
@@ -34,4 +37,4 @@
     <a href="/series" class="button-series" role="button">VOIR TOUTES LES SÉRIES</a>
 
     <script src="{{asset('js/slideshow.js')}}"></script>
-@endsection
+</body>
