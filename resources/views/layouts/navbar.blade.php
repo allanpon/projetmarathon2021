@@ -24,28 +24,31 @@
             <option value="anime">Anime</option>
             <option value="family">Family</option>
         </select>
-        <div class="dropdown">
-            @guest()
-                <button onclick="myFunction()" class="dropbtn">Invité</button>
-            @else
-                <button onclick="myFunction()" class="dropbtn">{{Auth::user()->name}}</button>
-            @endguest
-            <div id="myDropdown" class="dropdown-content">
-                @guest()
-                    <a href="{{ route('login')}}">Connection</a>
-                    <a href="{{ route('register')}}">Inscription</a>
-                @else
-                    <a href="{{route('user')}}">Profil</a>
-                    <a href="{{ route('logout') }}"
-                       onclick="event.preventDefault();
-                                                 document.getElementById('logout-form').submit();" >
-                        Se déconnecter
-                    </a>
-                @endguest
-            </div>
-        </div>
     </form>
+    <div class="dropdown">
+        @guest()
+            <button onclick="myFunction()" class="dropbtn">Invité</button>
+        @else
+            <button onclick="myFunction()" class="dropbtn">{{Auth::user()->name}}</button>
+        @endguest
+        <div id="myDropdown" class="dropdown-content">
+            @guest()
+                <a href="{{ route('login')}}">Connection</a>
+                <a href="{{ route('register')}}">Inscription</a>
+            @else
+                <a href="{{route('user')}}">Profil</a>
+                <a href="{{ route('logout') }}"
+                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();" >
+                    Se déconnecter
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    {{ csrf_field() }}
+                </form>
 
+            @endguest
+        </div>
+    </div>
 </nav>
 <script>
     /* When the user clicks on the button,

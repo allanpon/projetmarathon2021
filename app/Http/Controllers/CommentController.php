@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -32,18 +33,25 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(Request $request,array $ids)
     {
-        //
+        $this->validate(
+            $request,
+            [
+                'content' => 'required',
+                'note' => 'required',
+            ]
+        );
+        $comment = new Comment;
+        $comment->content = $request->comment;
+        $comment->note = $request->note ;
+        $comment->validated =0;
+        $comment->user_id=$ids[0];
+        $comment->serie_id =$ids[1];
+        $comment->save();
+        return redirect()->back()->with('message', 'le commentaire a été sauvegardé');;
     }
 
     /**

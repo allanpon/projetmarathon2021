@@ -24,6 +24,30 @@
 {!! $serie->resume !!}
 
 <h2>Commentaires</h2>
+@auth()
+ <form action="{{route('comment.creer',[Auth::id(),$serie->id])}}" method="POST">
+    {!! csrf_field() !!}
+    <div class="text-center" style="margin-top: 2rem">
+        <h5>Laisser un commentaire</h5>
+        <hr class="mt-2 mb-2">
+    </div>
+    <div>
+        <label for="autonomie"><strong>Note (entre 0 et 5):</strong></label>
+        <input type="number" name="note" id="note"
+               value="{{ old('note') }}"
+               placeholder="1 - 5">
+    </div>
+    <div>
+        <label for="textarea-input"><strong>Commentaire :</strong></label>
+        <textarea name="comment" id="comment" rows="6" class="form-control" cols="20"
+                  placeholder="Commentaire">{{ old('comment') }}</textarea>
+    </div>
+    <div>
+        <button class="btn btn-success" type="submit">Valide</button>
+    </div>
+
+</form>
+@endauth
 @foreach($commentaires as $commentaire)
     <x-comment :com="$commentaire"></x-comment><br><br>
 @endforeach
