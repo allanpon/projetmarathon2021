@@ -31,16 +31,9 @@ class SerieController extends Controller
             $series = Serie::where("genre",$request->get("genre"))->get();
         }
 
-        $tri = $request->get("tri");
-        if(empty($tri)){
-            $tri= Serie::all();
-        }
-        else{
-            $series = Serie::select('SELECT * FROM Serie order by nom ASC');
-        }
 
 
-        return view('listeSeries', ['data' => $series,"search" => $search,'tri' => $tri]);
+        return view('listeSeries', ['data' => $series,"search" => $search]);
     }
 
 

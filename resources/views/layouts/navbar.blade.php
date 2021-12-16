@@ -5,10 +5,6 @@
     <a href='{{route('home')}}' class="imglink"> <img src="{{asset('img/logo.png')}}" class="logimg" alt=""></a>
     <div>
         <form id="form-search">
-            <select class="tri" name="tri" id="tri-select" onchange="document.querySelector('#form-search').submit();">
-                <option value="">--Triez votre liste--</option>
-                <option value="nom">Triez par nom</option>
-            </select>
 
             <input type="text" class="search-box" name="recherche" placeholder="Rechercher (ne marche pas dans home)">
 
