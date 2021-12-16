@@ -1,12 +1,7 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <title>Détail Série ID {{ $serie->id}}</title>
-</head>
-<header>
-    @include('layouts.app')
-</header>
+<title>Détail Série ID {{ $serie->id}}</title>
+@include('layouts.app')
 <body>
 <br>
 id: {{ $serie->id}}<br><br>

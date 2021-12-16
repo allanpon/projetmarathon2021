@@ -1,19 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ app()->getLocale() }}">
-<head>
+<header>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Styles -->
-</head>
-
-<a href="{{ url('/') }}">
-    Movibe
-</a>
+</header>
+<head>
 <nav>
+    <a href="{{ url('/') }}">
+        Movibe
+    </a>
     <ul>
         @guest
             <li><a href="{{ route('login') }}">Login</a></li>
@@ -34,13 +31,9 @@
             </form>
         @endguest
         <li><a href="/series">Liste</a></li>
-        <li><a href="/cards">cards_test</a></li>
     </ul>
 </nav>
 <div id="main">
     @yield('content')
 </div>
-<!-- Scripts -->
-</header>
-
-</html>
+</head>

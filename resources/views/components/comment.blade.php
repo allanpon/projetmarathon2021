@@ -9,6 +9,20 @@
             margin-left: 10px;
             background-color: #f54242;
             border-radius: 20px;padding-left: 5px;padding-right: 5px">en attente de validation</p>
+            @if(Auth::user()->administrateur)
+                <form action="{{ route('valide', $c->id) }}" method="POST">
+                    {{ csrf_field() }}
+                    {{ method_field('PATCH') }}
+                    <button type="submit" style="margin-left: 10px;float: right">valider</button>
+                </form>
+            @endif
+        @endif
+        @if(Auth::user()->id=$c->user_id||Auth::user()->administrateur)
+            <form action="{{ route('delete', $c->id) }}" method="POST">
+                {{ csrf_field() }}
+                {{ method_field('PATCH') }}
+                <button type="submit" style="margin-left: 10px;float: right">delete</button>
+            </form>
         @endif
 
         <br>

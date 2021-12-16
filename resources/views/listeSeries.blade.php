@@ -1,13 +1,7 @@
-
 <!doctype html>
-@include("layouts.app")
-
-<html>
+<html lang="fr">
 <link rel="stylesheet" href="css/style-liste.css">
-
-<head>
-
-</head>
+@include("layouts.app")
 <body>
     @section("content")
     Bonjour et bienvenue sur la liste des série !<br>
