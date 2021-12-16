@@ -34,7 +34,7 @@
         @endforeach
     </div>
 
-    <a href="/series" class="button-series" role="button">VOIR TOUTES LES SÉRIES</a>
+    <a href="{{route('series.index')}}" class="button-series" role="button">VOIR TOUTES LES SÉRIES</a>
 
     <script src="{{asset('js/slideshow.js')}}"></script>
 </body>

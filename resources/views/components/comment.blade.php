@@ -4,7 +4,20 @@ foreach ($ct as $ct2){
     $c=$ct2;
 }
 ?>
-@if(Auth::user()->id=$c->user_id||$c->validated==1||Auth::user()->administrateur)
+@guest()
+    <div>
+        <div style="margin-left: 100px;margin-right: 100px;border-radius: 25px;border: 1px #455d5d">
+            <img style="width:50px;float: left;border-radius: 25px" src="{{asset($c->avatar)}}">
+            <p style="float: left">{{$c->name}}</p>
+            <p style="float: left;margin-left: 10px">Note : {{$c->note}}</p>
+            <br>
+            <br>
+            <br>
+            <div>{!! $c->content !!}</div>
+        </div>
+    </div>
+@else
+    @if(Auth::user()->id=$c->user_id||$c->validated==1||Auth::user()->administrateur)
     <div>
         <div style="margin-left: 100px;margin-right: 100px;border-radius: 25px;border: 1px #455d5d">
             <img style="width:50px;float: left;border-radius: 25px" src="{{asset($c->avatar)}}">
@@ -19,7 +32,7 @@ foreach ($ct as $ct2){
                     <form action="{{ route('valide', $c->id) }}" method="POST">
                         {{ csrf_field() }}
                         {{ method_field('PATCH') }}
-                        <button type="submit" style="margin-left: 10px;float: right">validerooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo</button>
+                        <button type="submit" style="margin-left: 10px;float: right">valider</button>
                     </form>
                 @endif
             @endif
@@ -36,4 +49,5 @@ foreach ($ct as $ct2){
             <div>{!! $c->content !!}</div>
         </div>
     </div>
-@endif
+    @endif
+@endguest

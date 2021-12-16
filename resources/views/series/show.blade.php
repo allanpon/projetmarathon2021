@@ -17,17 +17,11 @@
 Resume: {!! $serie->resume !!}
 Commentaires: <br>
 @foreach($commentaires as $commentaire)
-    ID de l'utilisateur: {!! $commentaire->id !!} <br>
-    Créé le: {!! $commentaire->created_at !!}
-    {!! $commentaire->content !!} <br><br>
+    <x-comment :com="$commentaire"></x-comment><br><br>
 @endforeach
 episodes: <br>
 @foreach($episodes as $episode)
-    <ul>
-        <li>Episode {{$episode->numero}}, Saison {{$episode->saison}}: {{$episode->nom}}</li>
-        {!! $episode->resume !!}
-        {{ $episode->duree }} minutes
-    </ul>
+    <x-episode :ep="$episode"></x-episode><br><br>
 @endforeach
 @yield('scripts')
 </body>
