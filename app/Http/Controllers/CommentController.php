@@ -48,7 +48,7 @@ class CommentController extends Controller
         $comment->content = $request->comment;
         $comment->note = $request->note ;
         $comment->validated =0;
-        $comment->user_id=$ids[0];
+        $comment->user_id=1;//$ids[0];
         $comment->serie_id =$ids[1];
         $comment->save();
         return redirect()->back()->with('message', 'le commentaire a été sauvegardé');;
