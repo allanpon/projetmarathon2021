@@ -15,7 +15,7 @@
         <div id="series">
             @foreach($data as $serie)
                 <div class="example">
-                    <img src="/{{$serie->urlImage}}">
+                    <img src="{{asset($serie->urlImage)}}">
                     <a href="/series/{{$serie->id}}">
                         <div class="content">
                             <div class="text">
