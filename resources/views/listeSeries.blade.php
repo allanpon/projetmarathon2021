@@ -1,11 +1,11 @@
 <!doctype html>
 <html lang="fr">
 <link rel="stylesheet" href="css/style-liste.css">
-@include("layouts.app")
+@include("layouts.navbar")
 <body>
     @section("content")
     Bonjour et bienvenue sur la liste des série !<br>
-    <form id="form-search">
+    {{--}}<form id="form-search">
         <input type="text" name="recherche"/>
         <input type="submit" value="Envoyez">
         @if(!empty($search))
@@ -33,7 +33,7 @@
             <option value="family">Family</option>
         </select>
 
-    </form>
+    </form>{{--}}
 
 
     @if(count($data) ==0)
@@ -41,10 +41,18 @@
     @else
         <div id="series">
             @foreach($data as $serie)
-                <div>
-                    <a href="/series/{{$serie->id}}"><img src="/{{$serie->urlImage}}" alt="imageSerie"></a>
-                    <br />
-                    {{$serie->nom }}
+                <div class="example">
+                    <img src="/{{$serie->urlImage}}">
+                    <a href="/series/{{$serie->id}}">
+                        <div class="content">
+                            <div class="text">
+                                Genre :{{$serie->genre}}<br>
+                                Langue :{{$serie->langue}}<br>
+                                Nombre de saisons :{{$serie->nbSaisons()}}
+                            </div>
+                        </div>
+                    </a>
+                    {{$serie->nom}}
                 </div>
             @endforeach
         </div>
