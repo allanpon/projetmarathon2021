@@ -1,6 +1,11 @@
-@extends('layouts.app')
+<!doctype html>
+<html lang="fr">
+<header>
+    <link rel="stylesheet" href="{{asset('css/style-login.css')}}">
+</header>
 
-@section('content')
+<title>Liste des séries</title>
+<body>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
@@ -12,12 +17,9 @@
                             @csrf
 
                             <div class="row mb-3">
-                                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
-
                                 <div class="col-md-6">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
-                                    @error('name')
+                                    <input id="name" type="text" placeholder="nom" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -67,6 +69,7 @@
                                         {{ __('Register') }}
                                     </button>
                                 </div>
+                                <a href="{{ route('login')}}">Connection</a>
                             </div>
                         </form>
                     </div>
@@ -74,4 +77,4 @@
             </div>
         </div>
     </div>
-@endsection
+</body>
