@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 #series {
+    margin-top:150px;
     display : grid;
     grid-column-gap : 40px;
     grid-row-gap : 10px;
