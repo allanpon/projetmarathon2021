@@ -4,7 +4,7 @@
 <nav class="navbar" id="from-search">
     <a href='{{route('home')}}' class="imglink"> <img src="{{asset('img/logo.png')}}" class="logimg" alt=""></a>
     <form id="form-search">
-        <input type="text" class="search-box" name="recherche" placeholder="Rechercher">
+        <input type="text" class="search-box" name="recherche" placeholder="Rechercher (ne marche pas dans home)">
 
         <select class="categories" name="genre" id="genre-select" onchange="document.querySelector('#form-search').submit();">
             <option value="">--Selectionnez un genre--</option>

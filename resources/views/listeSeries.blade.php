@@ -26,7 +26,7 @@
                             </div>
                         </div>
                     </a>
-                    {{$serie->nom}}
+                    {{ \Illuminate\Support\Str::limit($serie->nom, 21, $end='...') }}
                 </div>
             @endforeach
         </div>
