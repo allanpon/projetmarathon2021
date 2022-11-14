@@ -17,7 +17,7 @@ foreach ($ct as $ct2){
         </div>
     </div>
 @else
-    @if(Auth::user()->id=$c->user_id||$c->validated==1||Auth::user()->administrateur)
+    @if(Auth::user()->id==$c->user_id||$c->validated==1||Auth::user()->administrateur)
     <div>
         <div style="border-radius: 25px;border: 1px #455d5d">
             <img style="width:50px;float: left;border-radius: 25px" src="{{asset($c->avatar)}}">
@@ -36,7 +36,7 @@ foreach ($ct as $ct2){
                     </form>
                 @endif
             @endif
-            @if(Auth::user()->id=$c->user_id||Auth::user()->administrateur)
+            @if(Auth::user()->id==$c->user_id||Auth::user()->administrateur)
                 <form action="{{ route('delete', $c->id) }}" method="POST">
                     {{ csrf_field() }}
                     {{ method_field('PATCH') }}

@@ -10,21 +10,21 @@
 
             <select class="categories" name="genre" id="genre-select" onchange="document.querySelector('#form-search').submit();">
                 <option value="">--Selectionnez un genre--</option>
-                <option value="crime">Crime</option>
-                <option value="comedy">Comedy</option>
-                <option value="horror">Horror</option>
-                <option value="romance">Romance</option>
+                <option value="Crime">Crime</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Horror">Horror</option>
+                <option value="Romance">Romance</option>
                 <option value="Science-Fiction">S-F</option>
-                <option value="fantasy">Fantasy</option>
-                <option value="legal">Legal</option>
-                <option value="thriller">Thriller</option>
-                <option value="history">History</option>
-                <option value="mystery">Mystery</option>
-                <option value="supernatural">Supernatural</option>
-                <option value="western">Western</option>
-                <option value="drama">Drama</option>
-                <option value="anime">Anime</option>
-                <option value="family">Family</option>
+                <option value="Fantasy">Fantasy</option>
+                <option value="Legal">Legal</option>
+                <option value="Thriller">Thriller</option>
+                <option value="History">History</option>
+                <option value="Mystery">Mystery</option>
+                <option value="Supernatural">Supernatural</option>
+                <option value="Western">Western</option>
+                <option value="Drama">Drama</option>
+                <option value="Anime">Anime</option>
+                <option value="Family">Family</option>
             </select>
 
 

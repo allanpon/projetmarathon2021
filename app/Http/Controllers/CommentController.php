@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class CommentController extends Controller
@@ -48,7 +49,7 @@ class CommentController extends Controller
         $comment->content = $request->comment;
         $comment->note = $request->note ;
         $comment->validated =0;
-        $comment->user_id=1;//$ids[0];
+        $comment->user_id=Auth::id();
         $comment->serie_id =$ids;
         $comment->save();
         return redirect()->back()->with('message', 'le commentaire a été sauvegardé');;
